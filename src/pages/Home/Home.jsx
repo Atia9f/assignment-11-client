@@ -4,7 +4,6 @@ import Header from "../Shared/Header/Header";
 import Guest from "../Guest";
 import { Helmet } from "react-helmet-async";
 import TouristSpots from "./FeaturedFoodsCard";
-import Countries from "../Countries";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 import BestOffer from "../BestOffer";
@@ -63,7 +62,7 @@ const Home = () => {
                     </h1>
                 </Fade>
 
-                <Countries></Countries>
+                
             </div>
                 <BestOffer></BestOffer>
 

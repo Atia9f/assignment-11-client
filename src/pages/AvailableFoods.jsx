@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import AvailableFoodsCard from "./AvailableFoodsCard";
+import { useQuery } from "@tanstack/react-query";
 
 const AvailableFoods = () => {
     const [allFoods, setAllFoods] = useState([]);
@@ -12,14 +13,29 @@ const AvailableFoods = () => {
         setIsThreeColumnLayout(prevState => !prevState);
     }
 
+    const { data} = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () =>
+            fetch('http://localhost:5000/allfood').then((res) =>
+                res.json(),
+            ),
+    });
+
     useEffect(() => {
-        fetch('http://localhost:5000/allfood')
-            .then(res => res.json())
-            .then(data => {
-                setAllFoods(data);
-                setSortedFoods(data);
-            });
-    }, []);
+        if (data) {
+            setSortedFoods(data);
+            setAllFoods(data); // Set the fetched data to the state
+        }
+    }, [data]);
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/allfood')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setAllFoods(data);
+    //             setSortedFoods(data);
+    //         });
+    // }, []);
 
     // Sorting 
     const sortByExpirationDate = () => {

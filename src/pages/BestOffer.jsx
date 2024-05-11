@@ -1,27 +1,86 @@
 import { Typewriter } from 'react-simple-typewriter';
-import image1 from '../assets/1.png';
-import image2 from '../assets/2.png';
-import image3 from '../assets/3.png';
-import image4 from '../assets/4.png';
+import food1 from '../assets/fea-1.jpg'
+import food2 from '../assets/fea-2.jpg'
+import { IoMdCheckmark } from "react-icons/io";
 
 const BestOffer = () => {
     return (
         <div>
             <h1 className="text-center font-bold text-2xl mb-12 mt-[100px]">
-            <Typewriter
+                <Typewriter
                     words={['We Offer the best']}
                     loop={2}
-                    
+
                     cursorStyle='_'
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
 
                 />
-                
-                </h1>
 
+            </h1>
+
+            <div className='flex flex-col md:flex-row-reverse gap-12 justify-between items-center'>
+                <div className='w-1/2'>
+                    <img src={food1} alt="" />
+                </div>
+                <div className='w-1/2'>
+                    <h1>Core Features</h1>
+                    <p className='mt-4'>We showcase key attributes, such as Community Food Sharing, Food Waste Reduction, and Support for Food Security. These features underline our commitment to fostering a sustainable food sharing ecosystem within communities. With ExcessEats, individuals and organizations can actively participate in the reduction of food waste and help those facing food insecurity.</p>
+
+                    <div className='flex'>
+                        <IoMdCheckmark/>
+                       <div>
+                       <h1>Community Food Sharing</h1>
+                        <p>
+                            ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
+                        </p>
+                       </div>
+                    </div>
+                    <div>
+                        <h1>Food Waste Reduction</h1>
+                        <p>
+                            By participating in ExcessEats, you actively contribute to the reduction of food waste. Share your excess food resources with others in your community, and help us make a positive impact by preventing edible food from ending up in landfills.
+                        </p>
+                    </div>
+                    <div>
+                        <h1>Support Food Security</h1>
+                        <p>
+                            AExcessEats prioritizes food security, ensuring that everyone has access to quality, nutritious food. Join our platform to help us build a sustainable food sharing ecosystem that benefits those facing food insecurity.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div>
+                <div>
+                    <img src={food2} alt="" />
+                </div>
+                <div>
+                    <h1>Our Commitment</h1>
+                    <p>We emphasize Community Engagement, Sustainability, and a User-Friendly Platform. ExcessEats commits to building strong community connections, promoting sustainability in food practices, and ensuring an accessible and intuitive platform. We are dedicated to reducing food waste and making a meaningful change in the way communities share and reduce surplus food resources.</p>
+
+                    <div>
+                        <h1>Community Engagement</h1>
+                        <p>
+                            ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
+                        </p>
+                    </div>
+                    <div>
+                        <h1>Sustainability</h1>
+                        <p>
+                            By participating in ExcessEats, you actively contribute to the reduction of food waste. Share your excess food resources with others in your community, and help us make a positive impact by preventing edible food from ending up in landfills.
+                        </p>
+                    </div>
+                    <div>
+                        <h1>User-Friendly Platform</h1>
+                        <p>
+                            AExcessEats prioritizes food security, ensuring that everyone has access to quality, nutritious food. Join our platform to help us build a sustainable food sharing ecosystem that benefits those facing food insecurity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div>
                 <img src="" alt="" />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -61,7 +120,7 @@ const BestOffer = () => {
                         <p>Create unforgettable memories with our Family Trips package! Tailored for families seeking adventure, relaxation, and quality time together, our carefully curated itineraries promise fun-filled experiences for all ages. </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
