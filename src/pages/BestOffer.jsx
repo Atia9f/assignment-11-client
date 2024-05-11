@@ -1,7 +1,7 @@
 import { Typewriter } from 'react-simple-typewriter';
 import food1 from '../assets/fea-1.jpg'
 import food2 from '../assets/fea-2.jpg'
-import { IoMdCheckmark } from "react-icons/io";
+import { GiCheckMark } from "react-icons/gi";
 
 const BestOffer = () => {
     return (
@@ -20,66 +20,82 @@ const BestOffer = () => {
 
             </h1>
 
-            <div className='flex flex-col md:flex-row-reverse gap-12 justify-between items-center'>
+            <div className='flex flex-col md:flex-row-reverse gap-20 mb-16 justify-around items-center'>
                 <div className='w-1/2'>
                     <img src={food1} alt="" />
                 </div>
-                <div className='w-1/2'>
+                <div className='w-2/3'>
                     <h1>Core Features</h1>
                     <p className='mt-4'>We showcase key attributes, such as Community Food Sharing, Food Waste Reduction, and Support for Food Security. These features underline our commitment to fostering a sustainable food sharing ecosystem within communities. With ExcessEats, individuals and organizations can actively participate in the reduction of food waste and help those facing food insecurity.</p>
 
-                    <div className='flex'>
-                        <IoMdCheckmark/>
+                    <div className='flex mt-9'>
+                        <span className='mt-2 mr-6'><GiCheckMark /></span>
+                        <div>
+                            <h1 className='mb-2'> Community Food Sharing</h1>
+                            <p>
+                                ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex mt-9'>
+                    <span className='mt-2 mr-6'><GiCheckMark /></span>
                        <div>
-                       <h1>Community Food Sharing</h1>
+                       <h1 className='mb-2'>Food Waste Reduction</h1>
                         <p>
-                            ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
+                            By participating in ExcessEats, you actively contribute to the reduction of food waste. Share your excess food resources with others in your community, and help us make a positive impact by preventing edible food from ending up in landfills.
                         </p>
                        </div>
                     </div>
-                    <div>
-                        <h1>Food Waste Reduction</h1>
-                        <p>
-                            By participating in ExcessEats, you actively contribute to the reduction of food waste. Share your excess food resources with others in your community, and help us make a positive impact by preventing edible food from ending up in landfills.
-                        </p>
-                    </div>
-                    <div>
-                        <h1>Support Food Security</h1>
+                    <div className='flex mt-9 '> 
+                    <span className='mt-2 mr-6'><GiCheckMark /></span>
+                        <div>
+                        <h1 className='mb-2'>Support Food Security</h1>
                         <p>
                             AExcessEats prioritizes food security, ensuring that everyone has access to quality, nutritious food. Join our platform to help us build a sustainable food sharing ecosystem that benefits those facing food insecurity.
                         </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
+           
+            <div className='flex flex-col md:flex-row gap-20 mt-24 mb-16 justify-around items-center'>
+                <div className='w-1/2'>
                     <img src={food2} alt="" />
                 </div>
-                <div>
+                <div className='w-2/3'>
                     <h1>Our Commitment</h1>
-                    <p>We emphasize Community Engagement, Sustainability, and a User-Friendly Platform. ExcessEats commits to building strong community connections, promoting sustainability in food practices, and ensuring an accessible and intuitive platform. We are dedicated to reducing food waste and making a meaningful change in the way communities share and reduce surplus food resources.</p>
+                    <p className='mt-4'>We showcase key attributes, such as Community Food Sharing, Food Waste Reduction, and Support for Food Security. These features underline our commitment to fostering a sustainable food sharing ecosystem within communities. With ExcessEats, individuals and organizations can actively participate in the reduction of food waste and help those facing food insecurity.</p>
 
-                    <div>
-                        <h1>Community Engagement</h1>
-                        <p>
-                            ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
-                        </p>
+                    <div className='flex mt-9'>
+                        <span className='mt-2 mr-6'><GiCheckMark /></span>
+                        <div>
+                            <h1 className='mb-2'> Community Engagement</h1>
+                            <p>
+                                ExcessEats brings communities together to share surplus food resources, reducing food waste and ensuring that no one goes hungry. Our platform connects individuals, businesses, and organizations, making it easy to share excess food with those in need.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h1>Sustainability</h1>
+                    <div className='flex mt-9'>
+                    <span className='mt-2 mr-6'><GiCheckMark /></span>
+                       <div>
+                       <h1 className='mb-2'>Sustainability</h1>
                         <p>
                             By participating in ExcessEats, you actively contribute to the reduction of food waste. Share your excess food resources with others in your community, and help us make a positive impact by preventing edible food from ending up in landfills.
                         </p>
+                       </div>
                     </div>
-                    <div>
-                        <h1>User-Friendly Platform</h1>
+                    <div className='flex mt-9 '> 
+                    <span className='mt-2 mr-6'><GiCheckMark /></span>
+                        <div>
+                        <h1 className='mb-2'>User-Friendly Platform</h1>
                         <p>
                             AExcessEats prioritizes food security, ensuring that everyone has access to quality, nutritious food. Join our platform to help us build a sustainable food sharing ecosystem that benefits those facing food insecurity.
                         </p>
+                        </div>
                     </div>
                 </div>
             </div>
-
+           
             {/* <div>
                 <img src="" alt="" />
             </div>
