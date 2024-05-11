@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "image_url": "https://i.ibb.co/tD4NBX8/card1.jpg",
+    "estate_title": "Luxury Beach Resort",
+    "segment_name": "Resorts",
+    "description": "Le Marche Etna House is a fully equipped villa with many 3 big rooms, swimming pool, terrace and lots of other facilities",
+    "description2":" Le Marche Etna House is a popular villa in the region – it’s a fully equipped house with many 3 big rooms, swimming pool, terrace and lots of other things. Located 12 miles from Palermo, villa  La Merche Etna House offers pet-friendly accommodations in with lots of outdoor and indoor facilities. The villa is equipped with air conditioning and free WiFi. Free private parking is available on site, so you should not have any problems with it. The kitchen is fitted with a dishwasher, refrigerator and an oven. A flat-screen TV is available in several rooms. You’ll also enjoly a sun terrace and many other things. You’ll also enjpy a variety of activities are available in the area, for example, diving and fishing. The airport is also close – Falcone-Borsellino Airport, several miles away from the property.This villa is perfectly air conditioned and has a TV.  Some units have a terrace and/or patio with sea views. There is a private bathroom with a bidet and shower in each unit, along with free toiletries. Towels are featured. The beaches around Rimini are especially popular in summer.",
+    "price": "$500/night",
+    "status": "rent",
+    "area": "3000 sqft",
+    "location": "Tropical Island Paradise",
+    "facilities": [
+      "beach access",
+      "swimming pool",
+      "spa",
+      "gym"
+    ]
+  },
+  {
+    "id": "2",
+    "image_url": "https://i.ibb.co/WxHMN1T/card2.jpg",
+    "estate_title": "Cozy Mountain Lodge",
+    "segment_name": "Lodges",
+    "description": "Escape to our cozy lodge nestled in the heart of the mountains. Perfect for a tranquil getaway.",
+    "description2": "Perfect place for private, family and corporate rest in Le Marche region, with best nature views. Bastilicata Grande Villa also includes a spa center and hot tub. Guests can enjoy an outdoor pool and a restaurant catering. There is a sitting area, a dining area and a kitchen. A flat-screen TV with satellite channels is featured.You can play tennis at the property, and the area is popular for windsurfing and canoeing.  The villa is located 4-minute walk from the beach. Featuring free WiFi and garden views and lots of sitting area, there are lot of things.You can play ping-pong at the property, and the area is popular for golfing. Pisa is 17 miles from the villa. The nearest airport is Galileo Galilei Airport, 17 miles from the property.The villa is located in the culturally fascinating place and it’s open during all 4 seasons for private, family and corporate rest.",
+    "price": "$200/night",
+    "status": "rent",
+    "area": "1500 sqft",
+    "location": "Mountain Range Retreat",
+    "facilities": [
+      "fireplace",
+      "hiking trails",
+      "scenic views"
+    ]
+  },
+  {
+    "id": "3",
+    "image_url": "https://i.ibb.co/tYGSDwF/card3.jpg",
+    "estate_title": "Urban Boutique Hotel",
+    "segment_name": "Hotels",
+    "description": "Stay in style at our chic boutique hotel located in the vibrant city center.",
+    "description2":"Summer Villa Emilia is a perfect place for luxury rest, traveling and tasting the best regional cuisine in Italy. The property features several queen beds, a full bed and a sofa. Private parking is also available.There is a dining area and a kitchen equipped with dishwasher. A flat-screen TV, air conditioning, summer balcony and terrace to enjoy the perfect nature views are featured. The villa is quite large and you can locate up to 7 people, including children.The bathroom is equipped with a hot tube and lots of spa services, so you may feel yourself in a spa salonThe region where you go on tour includes Renaissance cities like Bologna, Ferrara, and Modena, beautiful stretches of coastline some of the top best restaurants.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "2000 sqft",
+    "location": "Downtown Metropolis",
+    "facilities": [
+      "restaurant",
+      "fitness center",
+      "concierge service"
+    ]
+  },
+  {
+    "id": "4",
+    "image_url": "https://i.ibb.co/YZDxNL2/card4.jpg",
+    "estate_title": "Seaside Guesthouse",
+    "segment_name": "Guesthouses",
+    "description": "Enjoy a comfortable stay by the sea in our charming guesthouse with breathtaking coastal views.",
+    "description2":"A beautiful villa in one of the most attractive destinations of Italy – in Maremma coastline area,  in northwestern Italy. The villa features a spacious garden with a seasonal outdoor pool, a sun terrace, and free WiFi in public areas. All rooms in Villa Tuscany Maremma are all individually furnished and come with seaside and mountain views, an outdoor dining area, and a fully equipped kitchen or kitchenette. It also comes with 2 private bathrooms. The villa is very close to the beach and all cultural city hubs. You’ll enjoy day and night activities around the villa.A narrow strip along the coast in northwestern Italy is a breathtaking location to spend your summer – with family, friends or partner. The villa is available for private booking by couples as well.",
+    "price": "$150/night",
+    "status": "rent",
+    "area": "1200 sqft",
+    "location": "Coastal Village",
+    "facilities": [
+      "ocean view balcony",
+      "kitchenette",
+      "BBQ area"
+    ]
+  },
+  {
+    "id": "5",
+    "image_url": "https://i.ibb.co/Km46jmt/card5.jpg",
+    "estate_title": "Ski Chalet Retreat",
+    "segment_name": "Vacation Rentals",
+    "description": "Experience the ultimate winter getaway at our cozy ski chalet nestled in the snowy mountains.",
+    "description2":"Cottage Monte Bianco in Aosta Valley is a well-decorated, warm and fully functional country cottage perfect for your winter vacation. This mountain cottage is made up of stone and timber built on two storeys, with a large living room, glass window, a couch for two people and a bathroom with sauna.The second storeys features a double bedroom. There is also a queen bed. There is a large garden with mountain view outdoors. You may also use a porch equipped with BBQ and a wooden table.The site is located on the pleasant hills between Aosta Valley mountains. We have currently added two beds, set up in a wonderful Indian teepe available for two extra guests in addition to the four ones. Four beds for children are still the same.",
+    "price": "$400/night",
+    "status": "rent",
+    "area": "2500 sqft",
+    "location": "Snowy Mountain Resort",
+    "facilities": [
+      "hot tub",
+      "ski-in/ski-out access",
+      "fireplace"
+    ]
+  },
+  {
+    "id": "6",
+    "image_url": "https://i.ibb.co/tYGSDwF/card3.jpg",
+    "estate_title": "Rustic Mountain Cabin",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to nature in our charming rustic cabin nestled deep in the forest. Perfect for a peaceful retreat.",
+    "description2":"A wonderful fully equipped beachfront villa in Lazio, the home of Rome, where you’ll can get your best vacation memories.This huge villa features a terrace and a garden with a seasonal outdoor pool.The kitchen is equipped with a dishwasher, an oven and a microwave, as well as a coffee machine and a kettle. A flat-screen TV is provided. There is a private bathroom with a bathtub, so all guests can enjoy the stay. The villa features a modern design with a lot of free space for your perfect vacation. The property is 10 miles from the city center and shops. The villa is perfect for long-term stay of both families and a group of friends.Free private parking is featured as well.",
+    "price": "$180/night",
+    "status": "rent",
+    "area": "1000 sqft",
+    "location": "Remote Forest Setting",
+    "facilities": ["wood-burning stove", "hiking trails", "wildlife viewing"]
+  }
+]
