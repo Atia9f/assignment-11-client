@@ -8,6 +8,7 @@ const AvailableFoodsCard = ({ allFood }) => {
         additional_notes } = allFood;
 
     return (
+        
         <div className="card card-compact bg-base-100 shadow-xl my-8">
             <figure><img className="h-48 w-full" src={food_image} alt="Shoes" /></figure>
             <div className="card-body">
