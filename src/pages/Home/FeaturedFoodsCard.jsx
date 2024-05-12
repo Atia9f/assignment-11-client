@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import { motion } from "framer-motion";
 
 AOS.init();
 
@@ -11,10 +10,7 @@ const FeaturedFoodsCard = ({ food }) => {
   console.log(food)
     const { _id, food_name, food_image, donator: { name, image }, food_quantity, pickup_location, expired_datetime, additional_notes } = food;
     return (
-    //     <motion.div
-    //     whileHover={{ scale: 1.1 }}
-    //     whileTap={{ scale: 0.9 }}
-    //   >
+       
         <div className="card card-compact bg-base-100 shadow-xl my-8">
             <figure><img className="h-56 w-full" src={food_image} alt="Shoes" /></figure>
             <div className="card-body">
@@ -38,7 +34,6 @@ const FeaturedFoodsCard = ({ food }) => {
             </div>
 
         </div>
-        // </motion.div>
     );
 };
 

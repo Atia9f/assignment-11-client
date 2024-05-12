@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form";
@@ -13,7 +13,7 @@ const Register = () => {
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [showPassword, setPassword] = useState(false);
-  
+    const navigate = useNavigate()
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
@@ -28,6 +28,7 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(name, photo).then(() => {
                     toast.success('Successfully Create Account');
+                    navigate(location?.state? location.state : "/" )
                 });
             })
             .catch(error => {
