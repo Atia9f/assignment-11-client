@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        garamond: "EB Garamond, serif"
+        slabo: "Slabo 27px, serif"
       }
     },
   },

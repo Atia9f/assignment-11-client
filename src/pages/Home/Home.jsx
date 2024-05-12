@@ -20,9 +20,9 @@ const Home = () => {
 
 
             <div>
-                <h1 className="text-center font-bold text-2xl mb-12 mt-[100px]">
+                <h1 className="text-center font-extrabold text-4xl mb-12 mt-[100px]">
                 <Typewriter
-                    words={['Tourists Spots']}
+                    words={['Featured Foods']}
                     loop={2}
                     
                     cursorStyle='_'

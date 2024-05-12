@@ -14,7 +14,7 @@ const Guest = () => {
 
     return (
         <div className='mt-20'>
-            <h1 className='text-center font-bold text-3xl'>
+            <h1 className='text-center font-extrabold text-4xl mt-24 mb-16'>
                 <Typewriter
                     words={['Guest Reviews']}
                     loop={2}
@@ -29,7 +29,7 @@ const Guest = () => {
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 mt-20'>
                 <div data-aos="fade-down" className='flex  gap-10 '>
                     <img className='rounded-full w-[100px] h-[100px]' src={guest1} alt="" />
-                    <p className='md:mt-10'>I was in Italy for the first time and stayed by chance in a winder cottage Monte Bianco. I must say that was an unforgettable experience! <br /> <br />
+                    <p className='md:mt-10'>I absolutely love ShareBites! Its been a game-changer for me as a busy professional. <br /> I can easily find homemade meals that suit my dietary preferences and <br /> support local cooks in my community. Highly recommend! <br /> <br />
                         <span className='text-green-500'>
                             <Typewriter
                                 words={['― JOE DOE']}
@@ -46,7 +46,7 @@ const Guest = () => {
                 </div>
                 <div data-aos="fade-up" className='flex gap-10 '>
                     <img className='rounded-full w-[100px] h-[100px]' src={guest2} alt="" />
-                    <p className='md:mt-10 '>I’ll never forget our summer stay at villa Emilia! Perfect location, perfect service, amazing nature views. I enjoyed the stay and would recommend it to everyone. Moreover, there are a lot of interesting things to visit and do – fests, food tours, castles tours and much more! <br /> <br />
+                    <p className='md:mt-10 '>As a home cook, ShareBites has provided me with an amazing platform to share my passion for cooking with others. The community is so supportive, and its incredibly rewarding to see people enjoy my dishes. Thanks for creating such a wonderful space! <br /> <br />
                         <span className='text-green-500'>
                             <Typewriter
                                 words={['― KIM LEE']}
@@ -63,7 +63,7 @@ const Guest = () => {
                 </div>
                 <div data-aos="fade-down" className=' flex gap-10'>
                     <img className='rounded-full w-[100px] h-[100px]' src={guest3} alt="" />
-                    <p className='md:mt-10'>I was visiting Le Marche with my family and friends and stayed at  Etna House – this was an amazing and unforgettable stay! A lot of space, a pool, a beachfront, just a peaceful rest. <br /> <br />
+                    <p className='md:mt-10'>What a fantastic concept! ShareBites has made it so easy for me to find homemade meals that cater to my dietary restrictions. Plus, I love the social aspect of connecting with other food enthusiasts in my area. Keep up the great work <br /> <br />
                         <span className='text-green-500'>
                             <Typewriter
                                 words={['― TOM HENDRIX']}
