@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import userPic from "../../../assets/user.png"
 import '../../../App.css'
+import logo from '../../../assets/logo.png'
 
 const Nav = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -70,7 +71,11 @@ const Nav = () => {
                         }
                     </ul>
                 </div>
-                <a className=" btn-ghost text-xl font-semibold">Wanderlust Adventures</a>
+                <div className="flex justify-center items-center">
+                    <img className="w-10" src={logo} alt="" />
+                    <a className=" btn-ghost text-xl font-semibold">ShareBites</a>
+                </div>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -89,16 +94,16 @@ const Nav = () => {
                 </div>
 
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div  className="w-10 rounded-full">
+                    <div className="w-10 rounded-full">
 
                         <img
                             alt="Tailwind CSS Navbar component"
                             src={user?.photoURL || userPic}
                             onMouseEnter={handleMouseEnter}
-                            
+
                         />
                         {isHovered && user && (
-                            <div onMouseLeave={handleMouseLeave}  style={{ position: 'absolute', top: '100%', left: 0, background: 'lightblue', padding: '10px', borderRadius: '5px' }}>
+                            <div onMouseLeave={handleMouseLeave} style={{ position: 'absolute', top: '100%', left: 0, background: 'lightblue', padding: '10px', borderRadius: '5px' }}>
                                 <span> {user.displayName}</span> <br />
 
                             </div>

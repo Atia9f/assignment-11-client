@@ -4,7 +4,6 @@ import Header from "../Shared/Header/Header";
 import Guest from "../Guest";
 import { Helmet } from "react-helmet-async";
 import TouristSpots from "./FeaturedFoodsCard";
-import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 import BestOffer from "../BestOffer";
 
@@ -45,24 +44,6 @@ const Home = () => {
                 </Link>
 
             </div>
-            </div>
-            <div>
-                <Fade>
-                    <h1 className="text-center font-bold text-2xl mt-[100px] "> 
-                    <Typewriter
-                    words={['Countries Section']}
-                    loop={2}
-                    
-                    cursorStyle='_'
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-
-                />
-                    </h1>
-                </Fade>
-
-                
             </div>
                 <BestOffer></BestOffer>
 
