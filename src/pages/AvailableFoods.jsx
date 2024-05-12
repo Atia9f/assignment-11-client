@@ -14,7 +14,7 @@ const AvailableFoods = () => {
     }
 
     const { data} = useQuery({
-        queryKey: ['repoData'],
+        queryKey: ['users'],
         queryFn: () =>
             fetch('http://localhost:5000/allfood').then((res) =>
                 res.json(),

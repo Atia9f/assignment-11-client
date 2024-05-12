@@ -5,24 +5,24 @@ import swal from 'sweetalert2';
 const Update = () => {
 
     const food = useLoaderData();
-    const { _id, pickupLocation, foodName, foodImage, foodQuantity, additionalNotes, expiredDateTime } = food;
-
+    const { _id, pickup_location,  food_name, food_image,  food_quantity,additional_notes, expired_datetime } = food;
+console.log(food)
 
     const handleUpdateFood = e => {
         e.preventDefault();
 
         const form = e.target;
-        const foodName = form.foodName.value;
-        const foodImage = form.foodImage.value;
-        const foodQuantity = parseInt(form.foodQuantity.value);
+        const food_name = form.foodName.value;
+        const food_image = form.foodImage.value;
+        const food_quantity = parseInt(form.foodQuantity.value);
 
-        const pickupLocation = form.pickupLocation.value;
-        const expiredDateTime = form.expiredDateTime.value;
-        const additionalNotes = form.additionalNotes.value;
-        const foodStatus = form.foodStatus.value;
+        const pickup_location = form.pickupLocation.value;
+        const expired_datetime = form.expiredDateTime.value;
+        const additional_notes = form.additionalNotes.value;
+        const food_status = form.foodStatus.value;
 
 
-        const updateFood = { foodName, foodImage, foodQuantity, foodStatus, additionalNotes, expiredDateTime, pickupLocation }
+        const updateFood = { food_name,  food_image, food_quantity, food_status, additional_notes, expired_datetime, pickup_location }
 
 
         console.log(updateFood);
@@ -66,7 +66,7 @@ const Update = () => {
                         <span className="label-text">Food Name</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" placeholder="Food Name" required defaultValue={foodName} name="foodName" className="input input-bordered w-full" />
+                        <input type="text" placeholder="Food Name" required defaultValue={food_name} name="foodName" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2">
@@ -74,7 +74,7 @@ const Update = () => {
                         <span className="label-text">Food Image Url</span>
                     </label>
                     <label className="input-group">
-                        <input type="url" placeholder="Food Image url" required defaultValue={foodImage} name="foodImage" className="input input-bordered w-full" />
+                        <input type="url" placeholder="Food Image url" required defaultValue={food_image} name="foodImage" className="input input-bordered w-full" />
                     </label>
                 </div>
             </div>
@@ -87,7 +87,7 @@ const Update = () => {
                         <span className="label-text">Quantity</span>
                     </label>
                     <label className="input-group">
-                        <input type="number" placeholder="Quantity" required defaultValue={foodQuantity} name="foodQuantity" className="input input-bordered w-full" />
+                        <input type="number" placeholder="Quantity" required defaultValue={food_quantity} name="foodQuantity" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2">
@@ -95,7 +95,7 @@ const Update = () => {
                         <span className="label-text">Pickup Location</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" placeholder="Pickup Location" required defaultValue={pickupLocation} name="pickupLocation" className="input input-bordered w-full" />
+                        <input type="text" placeholder="Pickup Location" required defaultValue={pickup_location} name="pickupLocation" className="input input-bordered w-full" />
                     </label>
                 </div>
             </div>
@@ -108,7 +108,7 @@ const Update = () => {
                         <span className="label-text">Expire Date</span>
                     </label>
                     <label className="input-group">
-                        <input type="datetime-local" placeholder="Expire Date" required defaultValue={expiredDateTime} name="expiredDateTime" className="input input-bordered w-full" />
+                        <input type="datetime-local" placeholder="Expire Date" required defaultValue={expired_datetime} name="expiredDateTime" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2">
@@ -116,7 +116,7 @@ const Update = () => {
                         <span className="label-text">Additional Note</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" placeholder="Additional Note" required defaultValue={additionalNotes} name="additionalNotes" className="input input-bordered w-full" />
+                        <input type="text" placeholder="Additional Note" required defaultValue={additional_notes} name="additionalNotes" className="input input-bordered w-full" />
                     </label>
                 </div>
             </div>

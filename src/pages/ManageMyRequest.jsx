@@ -11,7 +11,6 @@ const ManageMyRequest = () => {
 
 
     const url = `http://localhost:5000/myRequest?email=${user?.email}`
-    // const url = `https://eleven-assignment-server-pink.vercel.app/myRequest?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

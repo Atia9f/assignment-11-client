@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ManageMyFoodsRow = ({ food, handleDelete }) => {
 
-    const { _id, foodName, foodImage, foodQuantity, expiredDateTime, foodStatus } = food;
+    const { _id, food_name, food_image, food_quantity, expired_datetime, food_status } = food;
 
 
 
@@ -19,20 +19,20 @@ const ManageMyFoodsRow = ({ food, handleDelete }) => {
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
-                            <img src={foodImage} alt="Avatar Tailwind CSS Component" />
+                            <img src={food_image} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">{foodName}</div>
+                        <div className="font-bold">{food_name}</div>
 
                     </div>
                 </div>
             </td>
             <td>
-                <span>Serve {foodQuantity} people</span>
+                <span>Serve {food_quantity} people</span>
             </td>
-            <td><p><span className="font-bold">Expires on:</span> {new Date(expiredDateTime).toLocaleString()}</p></td>
-            <td>{foodStatus}</td>
+            <td><p><span className="font-bold">Expires on:</span> {new Date(expired_datetime).toLocaleString()}</p></td>
+            <td>{food_status}</td>
             <th>
                 <Link to={`/update/${_id}`}><button className="btn text-white bg-[#388FB1]">Update</button></Link>
             </th>

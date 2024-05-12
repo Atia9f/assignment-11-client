@@ -9,7 +9,7 @@ import { useLoaderData } from "react-router-dom";
 const SingleFoodDetails = () => {
     const food = useLoaderData();
     console.log(food)
-    const { _id, food_name, food_image, donator: { name, image, email },  food_quantity, pickup_location, expiredDateTime} = food;
+    const { _id, food_name, food_image, donator: { name, image, email },  food_quantity, pickup_location,  expired_datetime} = food;
 
     const { user} = useContext(AuthContext);
    
@@ -56,7 +56,11 @@ const SingleFoodDetails = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    Swal("Good job!", "New Product Added Successfully.!", "success");
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "New Product Added Successfully!",
+                        icon: "success"
+                      });
                 }
             })
     }
@@ -79,7 +83,7 @@ const SingleFoodDetails = () => {
                     {/* Pick up location */}
                     <p className="text-sm mt-2 mb-5"><span className="font-bold">Pickup Location:</span> {pickup_location}</p>
                     {/* Expired */}
-                    <p className="text-sm mt-2 mb-5"><span className="font-bold">Expires on:</span> {new Date(expiredDateTime).toLocaleString()}</p>
+                    <p className="text-sm mt-2 mb-5"><span className="font-bold">Expires on:</span> {new Date(expired_datetime).toLocaleString()}</p>
 
                     <div className="flex items-center mt-2 mb-5">
                         <p className="ml-2 text-sm font-bold mr-4">Donor: {name}</p>
@@ -180,7 +184,7 @@ const SingleFoodDetails = () => {
                                             <span className="label-text">Expire Date</span>
                                         </label>
                                         <label className="input-group">
-                                            <input type="text" disabled defaultValue={expiredDateTime} name="expiredDateTime" className="input input-bordered w-full" />
+                                            <input type="text" disabled defaultValue={expired_datetime} name="expiredDateTime" className="input input-bordered w-full" />
                                         </label>
                                     </div>
                                     <div className="form-control md:w-1/2">

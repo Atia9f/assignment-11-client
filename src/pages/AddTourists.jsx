@@ -16,9 +16,9 @@ const AddTourists = () => {
         e.preventDefault();
 
         const form = e.target;
-        const foodName = form.foodName.value;
-        const foodImage = form.foodImage.value;
-        const foodQuantity = parseInt(form.foodQuantity.value);
+        const food_name = form.foodName.value;
+        const food_image = form.foodImage.value;
+        const food_quantity = parseInt(form.food_quantity.value);
 
 
         const email = user.email;
@@ -26,10 +26,10 @@ const AddTourists = () => {
         const image = user.photoURL;
 
 
-        const pickupLocation = form.pickupLocation.value;
-        const expiredDateTime = form.expiredDateTime.value;
-        const additionalNotes = form.additionalNotes.value;
-        const foodStatus = form.foodStatus.value;
+        const pickup_location = form.pickupLocation.value;
+        const expired_datetime = form.expiredDateTime.value;
+        const additional_notes = form.additionalNotes.value;
+        const food_status = form.foodStatus.value;
 
         const donator = {
             email: email,
@@ -37,7 +37,7 @@ const AddTourists = () => {
             image: image
         };
 
-        const allFood = { foodName, foodImage, foodQuantity, foodStatus, additionalNotes, expiredDateTime, pickupLocation, donator }
+        const allFood = {  food_name, food_image, food_quantity, food_status, additional_notes, expired_datetime, pickup_location, donator }
 
 
         console.log(allFood);
@@ -54,7 +54,11 @@ const AddTourists = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    Swal("Good job!", "New Food Added Successfully.!", "success");
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "New Food Added Successfully!",
+                        icon: "success"
+                      });
                 }
             })
     }
@@ -116,7 +120,7 @@ const AddTourists = () => {
                         <span className="label-text">Quantity</span>
                     </label>
                     <label className="input-group">
-                        <input type="number" placeholder="Quantity" name="foodQuantity" className="input input-bordered w-full" />
+                        <input type="number" placeholder="Quantity" name="food_quantity" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2">
