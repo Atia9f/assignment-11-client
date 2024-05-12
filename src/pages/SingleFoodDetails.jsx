@@ -58,7 +58,7 @@ const SingleFoodDetails = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: "Good job!",
-                        text: "New Product Added Successfully!",
+                        text: "Successfully Request!",
                         icon: "success"
                       });
                 }

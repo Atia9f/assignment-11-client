@@ -20,7 +20,7 @@ const MyList = () => {
             .then(data => setUserFoods(data))
     }, [])
 
-   
+
     const handleDelete = _id => {
         console.log(_id)
         Swal.fire({
@@ -57,7 +57,6 @@ const MyList = () => {
 
     return (
         <div className="overflow-x-auto">
-
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>QFood | Manage My Food</title>
@@ -66,39 +65,54 @@ const MyList = () => {
             <div>
                 <h1 className="text-center my-14 font-bold text-5xl">Manage My <span className="text-[#3FCDA6]">Foods</span></h1>
             </div>
-            <table className="table">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Food Name & Image</th>
-                        <th>Quantity</th>
-                        <th>Expiere Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        userFoods.map(food => <ManageMyFoodsRow
-                            key={food._id}
-                            food={food}
-                            handleDelete={handleDelete}
-                        ></ManageMyFoodsRow>)
-                    }
-                </tbody>
+
+            {/* <div>
+                {userFoods.map(food => (
+                    <ManageMyFoodsRow
+                        key={food._id}
+                        food={food}
+                        handleDelete={handleDelete}
+                    />
+                ))}
+            </div> */}
 
 
 
-            </table>
-            <div>
-
-                <h1 className="text-center my-14 font-bold text-5xl">Manage Ruquestor <span className="text-[#3FCDA6]">Foods</span></h1>
+            {/* Uncomment the table if you need it */}
+            <div className="overflow-x-auto">
+                <table className="table table-xs">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Food Name & Image</th>
+                            <th>Quantity</th>
+                            <th>Expiration Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {userFoods.map(food => (
+                            <ManageMyFoodsRow
+                                key={food._id}
+                                food={food}
+                                handleDelete={handleDelete}
+                            />
+                        ))}
+                    </tbody>
+                </table>
             </div>
-            <div className="flex justify-center items-center">
 
-                <Link to="/details"><button className="btn bg-[#3FCDA6] my-8">Manage</button></Link>
+            <div>
+                <h1 className="text-center my-14 font-bold text-5xl">Manage Requestor <span className="text-[#3FCDA6]">Foods</span></h1>
+            </div>
+
+            <div className="flex justify-center items-center">
+                <Link to="/details">
+                    <button className="btn bg-[#3FCDA6] my-8">Manage</button>
+                </Link>
             </div>
         </div>
+
     );
 };
 

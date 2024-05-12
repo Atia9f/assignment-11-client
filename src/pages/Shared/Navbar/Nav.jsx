@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import userPic from "../../../assets/user.png"
 import '../../../App.css'
@@ -8,8 +8,8 @@ import logo from '../../../assets/logo.png'
 const Nav = () => {
     const { user, logOut } = useContext(AuthContext);
     const [isHovered, setIsHovered] = useState(false);
-    const [isChecked, setIsChecked] = useState(true);
-    const [isLoaded, setIsLoaded] = useState(false);
+    // const [isChecked, setIsChecked] = useState(true);
+    // const [isLoaded, setIsLoaded] = useState(false);
 
     const handleSingOut = () => {
         logOut()
@@ -26,22 +26,22 @@ const Nav = () => {
     };
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme !== null) {
-            setIsChecked(storedTheme === 'light');
-        }
-        setIsLoaded(true);
-    }, []);
+    //     const storedTheme = localStorage.getItem('theme');
+    //     if (storedTheme !== null) {
+    //         setIsChecked(storedTheme === 'light');
+    //     }
+    //     setIsLoaded(true);
+    // }, []);
 
-    const handleToggle = () => {
-        const newTheme = isChecked ? 'dark' : 'light';
-        setIsChecked(!isChecked);
-        localStorage.setItem('theme', newTheme);
+    // const handleToggle = () => {
+    //     const newTheme = isChecked ? 'dark' : 'light';
+    //     setIsChecked(!isChecked);
+    //     localStorage.setItem('theme', newTheme);
 
-        document.documentElement.classList.toggle('dark-theme', newTheme === 'dark');
-    };
+    //     document.documentElement.classList.toggle('dark-theme', newTheme === 'dark');
+    // };
 
 
 
@@ -110,7 +110,7 @@ const Nav = () => {
                         )}
 
                     </div>
-                    <div
+                    {/* <div
 
                     >
                         <input
@@ -120,7 +120,7 @@ const Nav = () => {
                             onChange={handleToggle}
                         />
                         <span>{isLoaded ? (isChecked ? '' : '') : 'Loading...'}</span>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
