@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from "../../socialLogin/SocialLogin";
 import { FaEye , FaEyeSlash} from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import reg from '../../assets/register.png'
 
 const Register = () => {
 
@@ -45,8 +46,10 @@ const Register = () => {
             {/* <Nav></Nav> */}
             <div className=" ">
                 <div className="hero-content ">
-
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div>
+                        <img src={reg} alt="" />
+                    </div>
+                    <div className="card shrink-0 w-full max-w-sm  bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <h2 className="font-bold">Create an account</h2>
                             <div className="form-control">

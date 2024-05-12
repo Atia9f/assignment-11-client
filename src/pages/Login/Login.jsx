@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from "../../socialLogin/SocialLogin";
 import { Helmet } from "react-helmet-async";
+import login from '../../assets/login-bg.png'
 
 const Login = () => {
     const { singIn } = useContext(AuthContext);
@@ -39,9 +40,11 @@ const Login = () => {
             {/* <Nav></Nav> */}
             <div className=" ">
 
-                <div className="hero-content ">
-
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="hero-content">
+                    <div>
+                        <img src={login} alt="" />
+                    </div>
+                    <div className="card shrink-0 w-full max-w-sm  bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
                         <h2 className="font-bold">Please login</h2>
                             <div className="form-control">
