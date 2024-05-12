@@ -1,19 +1,22 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import AvailableFoodsCard from "./AvailableFoodsCard";
 import { useQuery } from "@tanstack/react-query";
+// import { AuthContext } from "../provider/AuthProvider";
 
 const AvailableFoods = () => {
+    // const { user } = useContext(AuthContext)
     const [allFoods, setAllFoods] = useState([]);
     const [sortedFoods, setSortedFoods] = useState([]);
     const [search, setSearch] = useState("");
     const [isThreeColumnLayout, setIsThreeColumnLayout] = useState(false);
+    // const [reqFood, setReqFood] = useState([])
 
     const toggleLayout = () => {
         setIsThreeColumnLayout(prevState => !prevState);
     }
 
-    const { data} = useQuery({
+    const { data } = useQuery({
         queryKey: ['users'],
         queryFn: () =>
             fetch('http://localhost:5000/allfood').then((res) =>
@@ -28,15 +31,7 @@ const AvailableFoods = () => {
         }
     }, [data]);
 
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/allfood')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setAllFoods(data);
-    //             setSortedFoods(data);
-    //         });
-    // }, []);
-
+  
     // Sorting 
     const sortByExpirationDate = () => {
         const sorted = [...sortedFoods];
