@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 const Update = () => {
 
@@ -40,7 +40,11 @@ console.log(food)
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    swal("Good job!", "Food Updated Successfully.!", "success");
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "Food Updated Successfully!",
+                        icon: "success"
+                      });
                 }
             })
     }
