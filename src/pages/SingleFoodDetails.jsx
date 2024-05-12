@@ -9,7 +9,7 @@ import { useLoaderData } from "react-router-dom";
 const SingleFoodDetails = () => {
     const food = useLoaderData();
     console.log(food)
-    const { _id, food_name, food_image, donator: { name, image, email },  food_quantity, pickup_location,  expired_datetime} = food;
+    const { _id, food_name, food_image, donator: { name, image, email }, food_status,  food_quantity, pickup_location,  expired_datetime} = food;
 
     const { user} = useContext(AuthContext);
    
@@ -17,7 +17,20 @@ const SingleFoodDetails = () => {
     // console.log(user.email)
     // console.log(user.metadata.lastSignInTime)
 
-
+    const handleRequestConfirm = id => {
+        fetch(`http://localhost:5000/requested/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ food_status: 'Requested' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+               
+            })
+    }
 
 
 
@@ -40,9 +53,9 @@ const SingleFoodDetails = () => {
         const expiredDateTime = form.expiredDateTime.value;
         const donation = form.donation.value;
         const additionalNote = form.additionalNote.value;
-        const foodStatus = form.foodStatus.value;
+        const food_status = form.foodStatus.value;
 
-        const reqFood = { foodName, foodImage, id, email, foodStatus, displayName, donatorName, photoURL, userEmail, requestDate, pickupLocation, additionalNote, expiredDateTime, donation }
+        const reqFood = { foodName, foodImage, id, email,  food_status, displayName, donatorName, photoURL, userEmail, requestDate, pickupLocation, additionalNote, expiredDateTime, donation }
         console.log(donation)
         console.log(donation)
         console.log(reqFood);
@@ -196,7 +209,7 @@ const SingleFoodDetails = () => {
                                             <span className="label-text">Food Status </span>
                                         </label>
                                         <label className="input-group">
-                                            <input type="text" disabled defaultValue="Available" name="foodStatus" className="input input-bordered w-full" />
+                                            <input type="text" disabled defaultValue={food_status} name="foodStatus" className="input input-bordered w-full" />
                                         </label>
                                     </div>
                                 </div>
@@ -245,7 +258,7 @@ const SingleFoodDetails = () => {
                                     </div>
                                 </div>
 
-                                <input type="submit" value="Request Confirm" className="btn btn-block bg-[#3FCDA6]  mt-7 text-white" />
+                                <input type="submit" onClick={()=>handleRequestConfirm(_id)} value="Request Confirm" className="btn btn-block bg-[#3FCDA6]  mt-7 text-white" />
                             </form>
 
 

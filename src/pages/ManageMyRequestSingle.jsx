@@ -1,11 +1,27 @@
 
 
-const ManageMyRequestSingle = ({ request,handleCancelConfirm }) => {
+const ManageMyRequestSingle = ({ request, handleCancelConfirm }) => {
     console.log(request)
-    const { _id, donation, donatorName, expiredDateTime, pickupLocation, foodImage, foodName, foodStatus, requestDate } = request;
+    const { _id, id, donation, donatorName, expiredDateTime, pickupLocation, foodImage, foodName, food_status, requestDate } = request;
 
 
-   
+    const handleRequestConfirm = id => {
+        fetch(`http://localhost:5000/requested/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ food_status: 'Available' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+            })
+    }
+
+
+
 
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -22,12 +38,17 @@ const ManageMyRequestSingle = ({ request,handleCancelConfirm }) => {
                 <p className="text-sm mt-2 mb-5"><span className="font-bold">Expires on:</span> {new Date(expiredDateTime).toLocaleString()}</p>
                 <p><span className="font-bold">Request Date : </span>{requestDate}</p>
                 <p><span className="font-bold">My Donation : </span>{donation} <span className="font-bold">$</span></p>
-                <p><span className="font-bold">Status : </span>{foodStatus}</p>
+                <p><span className="font-bold">Status : </span>Requested</p>
                 <div className="card-actions">
                     {
-                        foodStatus === 'Delivered' ? <button className="btn btn-outline  btn-success">Delivered</button> :
+                        food_status === 'Delivered' ? <button className="btn btn-outline  btn-success">Delivered</button> :
                             <div>
-                                <span className="font-bold">Cancel Request --</span> <button onClick={() => handleCancelConfirm(_id)} className="btn btn-outline btn-error">Cancel</button>
+                                <span className="font-bold">Cancel Request --</span>
+                                <button onClick={() => {
+                                    handleRequestConfirm(id);
+                                    handleCancelConfirm(_id);
+                                }} className="btn btn-outline btn-error">Cancel</button>
+
                             </div>
                     }
                 </div>

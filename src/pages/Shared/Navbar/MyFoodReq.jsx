@@ -17,6 +17,9 @@ const MyFoodReq = () => {
             .then(data => setRequest(data))
     }, [])
 
+
+    console.log(requests)
+    
     const handleCancelConfirm = _id => {
         Swal.fire({
             title: "Are you sure?",
@@ -65,6 +68,7 @@ const MyFoodReq = () => {
                         key={request._id}
                         request={request}
                         handleCancelConfirm={handleCancelConfirm}
+                       
                     ></ManageMyRequestSingle>)
                 }
             </div>
