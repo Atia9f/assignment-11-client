@@ -100,12 +100,6 @@ const Nav = () => {
                         {isHovered && user && (
                             <div onMouseLeave={handleMouseLeave}  style={{ position: 'absolute', top: '100%', left: 0, background: 'lightblue', padding: '10px', borderRadius: '5px' }}>
                                 <span> {user.displayName}</span> <br />
-                                <span> {
-                                    user ?
-                                        <button  onClick={handleSingOut} className="btn bg-[#F9A51A]">Log Out</button>
-                                        :
-                                        <NavLink to="/login"><button className=" btn btn-primary">Login</button></NavLink>
-                                }</span> <br />
 
                             </div>
                         )}
