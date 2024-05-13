@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import ManageMyRequestSingle from "./SingleFoodDetails";
+import { useQuery } from "@tanstack/react-query";
 
 
 const ManageMyRequest = () => {
@@ -10,12 +11,29 @@ const ManageMyRequest = () => {
     const [requests, setRequest] = useState([])
 
 
-    const url = `http://localhost:5000/myRequest?email=${user?.email}`
+
+
+    const { data } = useQuery({
+        queryKey: ['users'],
+        queryFn: () =>
+            fetch(`http://localhost:5000/myRequest?email=${user?.email}`).then((res) =>
+                res.json(),
+            ),
+    });
+
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setRequest(data))
-    }, [])
+        if (data) {
+            setRequest(data)
+        }
+    }, [data]);
+
+
+    // const url = `http://localhost:5000/myRequest?email=${user?.email}`
+    // useEffect(() => {
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => setRequest(data))
+    // }, [])
 
     const handleCancelConfirm = id => {
 

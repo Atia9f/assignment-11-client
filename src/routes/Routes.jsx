@@ -9,13 +9,13 @@ import PrivateProfile from "./PrivateProfile";
 import PrivateBooking from "./PrivateBooking";
 import MyList from "../pages/MyList";
 import AddTourists from "../pages/AddTourists";
-import AllTouristSpot from "../pages/AvailableFoods";
 import MyFoodReq from "../pages/Shared/Navbar/MyFoodReq";
 import ManageMyFoodsRow from "../pages/ManageMyFoodsRow";
 import SingleFoodDetails from "../pages/SingleFoodDetails";
 import Update from "../pages/Update";
 import Details from "./Details";
 import ManageMyRequestSingle from "../pages/ManageMyRequestSingle";
+import AvailableFoods from "../pages/AvailableFoods";
 
 const router = createBrowserRouter([
   {
@@ -26,13 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/allfoods'),
       },
       {
         path: '/allFood',
-        element: <AllTouristSpot></AllTouristSpot>,
-        loader: () => fetch('http://localhost:5000/allfood')
-
+        element: <AvailableFoods></AvailableFoods>,
       },
       {
         path: '/login',

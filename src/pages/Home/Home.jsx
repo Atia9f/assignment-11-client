@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Header from "../Shared/Header/Header";
 import Guest from "../Guest";
@@ -6,10 +6,28 @@ import { Helmet } from "react-helmet-async";
 import TouristSpots from "./FeaturedFoodsCard";
 import { Typewriter } from "react-simple-typewriter";
 import BestOffer from "../BestOffer";
+import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const Home = () => {
-    const food = useLoaderData();
-    console.log(food)
+   
+    const [food, setFood] = useState([]);
+
+    const { data } = useQuery({
+        queryKey: ['users'],
+        queryFn: () =>
+            fetch('http://localhost:5000/allfoods').then((res) =>
+                res.json(),
+            ),
+    });
+
+    useEffect(() => {
+        if (data) {
+          setFood(data)
+        }
+    }, [data]);
+
+
     const sixItems = food.slice(0, 6);
     return (
         <div>
