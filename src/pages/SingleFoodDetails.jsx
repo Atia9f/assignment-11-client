@@ -18,7 +18,7 @@ const SingleFoodDetails = () => {
     // console.log(user.metadata.lastSignInTime)
 
     const handleRequestConfirm = id => {
-        fetch(`http://localhost:5000/requested/${id}`, {
+        fetch(`https://food-server-phi.vercel.app/requested/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -62,7 +62,7 @@ const SingleFoodDetails = () => {
 
         //send data to the server
         //send data to the server
-        fetch('http://localhost:5000/reqfood', {
+        fetch('https://food-server-phi.vercel.app/reqfood', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

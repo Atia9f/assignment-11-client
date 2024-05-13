@@ -13,7 +13,7 @@ const MyList = () => {
     const { user } = useContext(AuthContext);
     const [userFoods, setUserFoods] = useState([])
 
-    const url = `http://localhost:5000/allAddfood?email=${user.email}`
+    const url = `https://food-server-phi.vercel.app/allAddfood?email=${user.email}`
     useEffect(() => {
         fetch(url, { credentials: 'include' })
             .then(res => res.json())
@@ -34,7 +34,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/allfood/${_id}`, {
+                fetch(`https://food-server-phi.vercel.app/allfood/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

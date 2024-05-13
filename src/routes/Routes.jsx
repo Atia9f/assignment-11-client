@@ -13,7 +13,6 @@ import MyFoodReq from "../pages/Shared/Navbar/MyFoodReq";
 import ManageMyFoodsRow from "../pages/ManageMyFoodsRow";
 import SingleFoodDetails from "../pages/SingleFoodDetails";
 import Update from "../pages/Update";
-import Details from "./Details";
 import ManageMyRequestSingle from "../pages/ManageMyRequestSingle";
 import AvailableFoods from "../pages/AvailableFoods";
 
@@ -42,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: '/singleFoodDetails/:id',
         element: <PrivateRoute> <SingleFoodDetails/></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allFoods/${params.id}`),        
+        loader: ({ params }) => fetch(`https://food-server-phi.vercel.app/allFoods/${params.id}`),        
       },
       {
         path: '/myList',
@@ -64,14 +63,11 @@ const router = createBrowserRouter([
         path: '/foodRow',
         element: <PrivateBooking><ManageMyFoodsRow/></PrivateBooking>
       },
-      {
-        path: '/details',
-        element: <PrivateRoute><Details></Details></PrivateRoute>
-      },
+      
       {
         path: '/update/:id',
         element: <PrivateBooking><Update></Update></PrivateBooking>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allfood/${params.id}`)
+        loader: ({ params }) => fetch(`https://food-server-phi.vercel.app/allfood/${params.id}`)
       }
     ]
   },

@@ -29,7 +29,7 @@ console.log(food)
 
         //send data to the server
         //send data to the server
-        fetch(`http://localhost:5000/allFood/${_id}`, {
+        fetch(`https://food-server-phi.vercel.app/allFood/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

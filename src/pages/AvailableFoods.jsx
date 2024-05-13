@@ -19,7 +19,7 @@ const AvailableFoods = () => {
     const { data } = useQuery({
         queryKey: ['users'],
         queryFn: () =>
-            fetch('http://localhost:5000/allfood').then((res) =>
+            fetch('https://food-server-phi.vercel.app/allfood').then((res) =>
                 res.json(),
             ),
     });

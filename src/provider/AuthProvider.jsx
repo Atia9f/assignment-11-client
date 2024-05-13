@@ -60,13 +60,13 @@ const AuthProvider = ({ children }) => {
 
             if (currentUser) {
 
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCreadential: true })
+                axios.post('https://food-server-phi.vercel.app/jwt', loggedUser, { withCreadential: true })
                     .then(res => {
                         console.log('token', res.data)
                     })
             }
             else {
-                axios.post('http://localhost:5000/jwt', loggedUser, {
+                axios.post('https://food-server-phi.vercel.app/jwt', loggedUser, {
                     withCredentials: true
                 })
                     .then(res => {

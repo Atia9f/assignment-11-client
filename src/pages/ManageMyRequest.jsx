@@ -16,7 +16,7 @@ const ManageMyRequest = () => {
     const { data } = useQuery({
         queryKey: ['users'],
         queryFn: () =>
-            fetch(`http://localhost:5000/myRequest?email=${user?.email}`).then((res) =>
+            fetch(`https://food-server-phi.vercel.app/myRequest?email=${user?.email}`).then((res) =>
                 res.json(),
             ),
     });
@@ -28,7 +28,7 @@ const ManageMyRequest = () => {
     }, [data]);
 
 
-    // const url = `http://localhost:5000/myRequest?email=${user?.email}`
+    // const url = `https://food-server-phi.vercel.app/myRequest?email=${user?.email}`
     // useEffect(() => {
     //     fetch(url)
     //         .then(res => res.json())

@@ -6,7 +6,7 @@ const ManageMyRequestSingle = ({ request, handleCancelConfirm }) => {
 
 
     const handleRequestConfirm = id => {
-        fetch(`http://localhost:5000/requested/${id}`, {
+        fetch(`https://food-server-phi.vercel.app/requested/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

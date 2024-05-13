@@ -1,6 +1,6 @@
 # ShareBites: Food Sharing Website
 
-**Live Site URL:** [ShareBites Website](https://www.sharebites.com)
+**Live Site URL:** [ShareBites Website](https://assignment-11-19bd1.web.app)
 
 Welcome to ShareBites, our food sharing platform! ShareBites aims to connect individuals or organizations with surplus food to those in need within their community. By facilitating the sharing of excess food, we strive to reduce food waste and ensure that everyone has access to nutritious meals.
 

@@ -9,7 +9,7 @@
 
 //     const [manageFoods, setManageFoods] = useState([])
 
-//     const url = `http://localhost:5000/donatorManage?email=${user.email}`
+//     const url = `https://food-server-phi.vercel.app/donatorManage?email=${user.email}`
 
 //     useEffect(() => {
 //         fetch(url)
@@ -19,7 +19,7 @@
 
 
 //     const handleRequestConfirm = id => {
-//         fetch(`http://localhost:5000/reqConfirm/${id}`, {
+//         fetch(`https://food-server-phi.vercel.app/reqConfirm/${id}`, {
 //             method: 'PATCH',
 //             headers: {
 //                 'content-type': 'application/json'

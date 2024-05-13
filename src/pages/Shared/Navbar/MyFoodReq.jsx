@@ -10,7 +10,7 @@ const MyFoodReq = () => {
     const [requests, setRequest] = useState([])
 
 
-    const url = `http://localhost:5000/myRequest?email=${user?.email}`
+    const url = `https://food-server-phi.vercel.app/myRequest?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -32,7 +32,7 @@ const MyFoodReq = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cancel/${_id}`, {
+                fetch(`https://food-server-phi.vercel.app/cancel/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

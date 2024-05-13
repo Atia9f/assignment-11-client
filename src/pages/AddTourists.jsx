@@ -43,7 +43,7 @@ const AddTourists = () => {
         console.log(allFood);
 
         //send data to the server
-        fetch('http://localhost:5000/allFood', {
+        fetch('https://food-server-phi.vercel.app/allFood', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
