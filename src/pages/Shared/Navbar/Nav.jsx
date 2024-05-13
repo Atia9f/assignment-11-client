@@ -71,7 +71,7 @@ const Nav = () => {
                         }
                     </ul>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex gap-2 justify-center items-center">
                     <img className="w-10" src={logo} alt="" />
                     <a className=" btn-ghost text-xl font-semibold">ShareBites</a>
                 </div>

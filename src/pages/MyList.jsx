@@ -1,7 +1,7 @@
 
 import { useContext, useEffect, useState } from "react";
 // import { useReactTable } from '@tanstack/react-table'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import ManageMyFoodsRow from "./ManageMyFoodsRow";
 import { Helmet } from "react-helmet-async";
@@ -102,7 +102,7 @@ const MyList = () => {
                 </table>
             </div>
 
-            <div>
+            {/* <div>
                 <h1 className="text-center my-14 font-bold text-5xl">Manage Requestor <span className="text-[#3FCDA6]">Foods</span></h1>
             </div>
 
@@ -110,7 +110,7 @@ const MyList = () => {
                 <Link to="/details">
                     <button className="btn bg-[#3FCDA6] my-8">Manage</button>
                 </Link>
-            </div>
+            </div> */}
         </div>
 
     );
