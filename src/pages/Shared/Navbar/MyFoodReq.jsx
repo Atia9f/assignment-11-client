@@ -56,7 +56,7 @@ const MyFoodReq = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>QFood | Manage My Request</title>
+                <title>ShareBites | Manage My Request</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div>

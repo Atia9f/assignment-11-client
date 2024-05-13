@@ -59,7 +59,7 @@ const MyList = () => {
         <div className="overflow-x-auto">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>QFood | Manage My Food</title>
+                <title>ShareBites | Manage My Food</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div>

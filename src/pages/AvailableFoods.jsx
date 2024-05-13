@@ -56,7 +56,7 @@ const AvailableFoods = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>QFood | Available Food</title>
+                <title>ShareBites | Available Food</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
 

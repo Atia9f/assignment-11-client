@@ -13,8 +13,10 @@ const Home = () => {
     const sixItems = food.slice(0, 6);
     return (
         <div>
-            <Helmet>
-                <title>Home</title>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>ShareBites | Home</title>
+                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <Header></Header>
 

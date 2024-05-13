@@ -35,7 +35,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Login</title>
+                <title>ShareBites | Login</title>
             </Helmet>
             {/* <Nav></Nav> */}
             <div className=" ">

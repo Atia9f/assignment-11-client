@@ -68,7 +68,7 @@ const AddTourists = () => {
         <form onSubmit={handleAddFood}>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>QFood | Add Food</title>
+                <title>ShareBites | Add Food</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
 

@@ -42,7 +42,7 @@ const Register = () => {
     return (
         <div>
             <Helmet>
-                <title>Register</title>
+                <title>ShareBites | Register</title>
             </Helmet>
             {/* <Nav></Nav> */}
             <div className=" ">
