@@ -13,7 +13,7 @@ const MyList = () => {
     const { user } = useContext(AuthContext);
     const [userFoods, setUserFoods] = useState([])
 
-    const url = `http://localhost:5000/allfood?email=${user.email}`
+    const url = `http://localhost:5000/allAddfood?email=${user.email}`
     useEffect(() => {
         fetch(url, { credentials: 'include' })
             .then(res => res.json())
